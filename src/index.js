@@ -1,7 +1,11 @@
 import './style.css';
 import { CurrentWeather } from './CurrentWeather.js';
+import { Giphy } from './Giphy.js';
 
 const weather = new CurrentWeather();
-const data = await weather.get();
+const giphy = new Giphy();
 
-console.log(data);
+const [weatherData, giphyData] = await Promise.all([weather.get(), giphy.get()]);
+
+const data = { weatherData, giphyData };
+
