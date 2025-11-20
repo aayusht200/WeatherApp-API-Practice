@@ -17,9 +17,8 @@ body {
 }
 
 .weather-app {
-    height: 80%;
-    aspect-ratio: 1/1;
     outline: 1px solid;
+    aspect-ratio: 1/1;
     display: grid;
     grid-template-rows: 4fr 1fr;
 }
