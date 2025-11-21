@@ -17,8 +17,16 @@ body {
 }
 
 .weather-app {
+    height: 80%;
     outline: 1px solid;
-    aspect-ratio: 1/1;
     display: grid;
     grid-template-rows: 4fr 1fr;
+}
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: masonry;
+}
+.weather-details > * {
+    outline: 1px solid;
 }

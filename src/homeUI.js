@@ -1,3 +1,4 @@
+import { Giphy } from './giphy.js';
 const weatherDomObject = {
     location: document.querySelector('.js-location'),
     temp: document.querySelector('.js-temp'),
@@ -10,9 +11,9 @@ const weatherDomObject = {
 };
 const giphyDomObject = document.querySelector('.giphy');
 
-export function buildApp({ weatherData, giphyData }) {
+export function buildApp(weatherData) {
     loadWeatherData(weatherData);
-    loadGiphy(giphyData);
+    loadGiphy();
 }
 
 function loadWeatherData(weatherData) {
