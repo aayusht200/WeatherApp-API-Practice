@@ -5,7 +5,4 @@ import { buildApp } from './homeUI.js';
 const weather = new CurrentWeather();
 
 const weatherData = await weather.get();
-
-const data = weatherData;
-
-buildApp(data);
+buildApp(weatherData);

@@ -10,8 +10,9 @@ export class CurrentWeather {
         const res = await fetch(
             `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/mumbai?unitGroup=us&include=current&key=DN7B5PPTW2GKZRF7E8T6Y3UFF&contentType=json`
         );
-        const data = await res.json();
-
+        let data = await res.json();
+        console.log(data);
+        data = { location: data.address, currentConditions: data.currentConditions, today: data.days[0] };
         // 3. Save to cache
         localStorage.setItem('weatherData', JSON.stringify(data));
 
