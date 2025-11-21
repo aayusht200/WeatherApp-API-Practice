@@ -3,13 +3,16 @@ export function organizeWeatherData(weatherData) {
         location: weatherData.location,
         currentTemp: toCelsius(weatherData.currentConditions.temp),
         date: new Date().toLocaleDateString('en-IN'),
+        average: toCelsius(weatherData.today.temp),
+        min: toCelsius(weatherData.today.tempmin),
+        max: toCelsius(weatherData.today.tempmax),
         feels: toCelsius(weatherData.currentConditions.feelslike),
         rain: toPercentage(weatherData.currentConditions.precipprob),
         sunrise: weatherData.today.sunrise,
         sunset: weatherData.today.sunset,
         value: currentCondition(toCelsius(weatherData.currentConditions.feelslike)),
     };
-    console.log(data);
+    return data;
 }
 
 function toCelsius(currentTemp) {
@@ -21,9 +24,9 @@ function toPercentage(value) {
 
 function currentCondition(temp) {
     if (temp >= 37) return 'scorching';
-    if (temp >= 34) return 'hotweather';
-    if (temp >= 30) return 'niceweather';
-    if (temp >= 24) return 'perfectweather';
-    if (temp >= 18) return 'pleasantweather';
-    if (temp <= 17) return 'coldweather';
+    if (temp >= 34) return 'hot';
+    if (temp >= 30) return 'sunny';
+    if (temp >= 24) return 'perfect';
+    if (temp >= 18) return 'cool';
+    if (temp <= 17) return 'cold';
 }

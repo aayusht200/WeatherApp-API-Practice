@@ -8,25 +8,25 @@
 
     <body>
         <div class="weather-app">
-            <div class="giphy-wrapper">
-                <img src="#" alt="weather animation" class="giphy" />
+            <div class="location js-location">Location:</div>
+            <div class="temp js-temp">Current Temprature: --°C</div>
+            <div class="date js-date">Date:</div>
+            <!-- <div class="time js-time">Time</div> -->
+
+            <div class="meta">
+                <div class="average js-average">Average temprature: --°C</div>
+                <div class="max js-max">Max temprature: --°C</div>
+                <div class="min js-min">Min temprature: --°C</div>
+                <div class="feels js-feels">Feels like: --°C</div>
+                <div class="rain js-rain">Chance of rain: --%</div>
             </div>
 
-            <div class="weather-details">
-                <div class="location js-location">Location</div>
-                <div class="temp js-temp">--°C</div>
-                <div class="date js-date">Date</div>
-                <!-- <div class="time js-time">Time</div> -->
-
-                <div class="meta">
-                    <div class="feels js-feels">Feels like: --°C</div>
-                    <div class="rain js-rain">Chance of rain: --%</div>
-                </div>
-
-                <div class="sun">
-                    <div class="sunrise js-sunrise">Sunrise: --</div>
-                    <div class="sunset js-sunset">Sunset: --</div>
-                </div>
+            <div class="sun">
+                <div class="sunrise js-sunrise">Sunrise: --</div>
+                <div class="sunset js-sunset">Sunset: --</div>
+            </div>
+            <div class="reset">
+                <button class="reset" type="reset">Fetch Current Data</button>
             </div>
         </div>
     </body>
