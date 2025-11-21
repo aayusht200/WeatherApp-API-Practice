@@ -4,9 +4,22 @@ import { buildApp } from './homeUI.js';
 
 const weather = new CurrentWeather();
 const resetBtn = document.querySelector('.reset');
-const weatherData = await weather.get();
-resetBtn.addEventListener('click', () => {
-    localStorage.clear();
+
+export async function init() {
+    const weatherData = await weather.get();
     buildApp(weatherData);
-});
-buildApp(weatherData);
+}
+
+resetBtn.addEventListener('click', resetData);
+
+// auto-refresh every 5 minutes
+setInterval(resetData, 5 * 60 * 1000);
+
+async function resetData() {
+    localStorage.clear();
+    const weatherData = await weather.get();
+    buildApp(weatherData);
+}
+
+// start app
+init();
