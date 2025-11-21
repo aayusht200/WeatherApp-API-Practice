@@ -3,9 +3,8 @@ import { CurrentWeather } from './CurrentWeather.js';
 import { buildApp } from './homeUI.js';
 
 const weather = new CurrentWeather();
-const giphy = new Giphy();
 
-const [weatherData, giphyData] = await Promise.all([weather.get()]);
+const weatherData = await weather.get();
 
 const data = weatherData;
 
