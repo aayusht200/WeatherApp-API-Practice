@@ -1,70 +1,70 @@
 :root {
-    --border-global: 0.5px solid hsla(0, 0%, 50%, 0.5);
-    --padding-global: 1rem;
-    --gap-global: 1rem;
-    --border-radius-global: 1rem;
-    --font-size-btn: 1.5rem;
-    --font-size-data: 1.2rem;
-    --font-weight-global: 600;
-    --margin-bottom-app: 2rem;
-    --bg-color-card: hsla(0, 0%, 100%, 0.401);
+	--border-global: 0.5px solid hsla(0, 0%, 50%, 0.5);
+	--padding-global: 1rem;
+	--gap-global: 1rem;
+	--border-radius-global: 1rem;
+	--font-size-btn: 1.5rem;
+	--font-size-data: 1.2rem;
+	--font-weight-global: 600;
+	--margin-bottom-app: 2rem;
+	--bg-color-card: hsla(0, 0%, 100%, 0.401);
 }
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Courier New", Courier, monospace;
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 .weather-app {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--gap-global);
-    margin-bottom: var(--margin-bottom-app);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gap-global);
+	margin-bottom: var(--margin-bottom-app);
 }
-@media (width<=500px) {
-    .weather-app {
-        display: flex;
-        flex-direction: column;
-    }
+@media (width <= 500px) {
+	.weather-app {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .reset {
-    cursor: pointer;
-    transition: scale 0.3s ease;
-    background: none;
-    font-size: var(--font-size-btn);
-    border-radius: var(--border-radius-global);
-    padding: var(--padding-global);
-    font-weight: var(--font-weight-global);
-    border: none;
-    max-height: fit-content;
+	cursor: pointer;
+	transition: scale 0.3s ease;
+	background: none;
+	font-size: var(--font-size-btn);
+	border-radius: var(--border-radius-global);
+	padding: var(--padding-global);
+	font-weight: var(--font-weight-global);
+	border: none;
+	max-height: fit-content;
 }
 
 .reset:hover {
-    scale: 1.05;
+	scale: 1.05;
 }
 
 .weather-app > div {
-    border: var(--border-global);
-    padding: var(--padding-global);
-    border-radius: var(--border-radius-global);
-    font-size: var(--font-size-data);
-    font-weight: var(--font-weight-global);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--bg-color-card);
+	border: var(--border-global);
+	padding: var(--padding-global);
+	border-radius: var(--border-radius-global);
+	font-size: var(--font-size-data);
+	font-weight: var(--font-weight-global);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: var(--bg-color-card);
 }
